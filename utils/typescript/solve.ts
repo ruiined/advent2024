@@ -99,7 +99,7 @@ async function checkAnswer(
     return false;
   }
   const result = await fetch(
-    `https://adventofcode.com/2023/day/${day}/answer`,
+    `https://adventofcode.com/2024/day/${day}/answer`,
     {
       method: 'POST',
       headers: {

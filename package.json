@@ -1,9 +1,9 @@
 {
-  "name": "advent2023",
+  "name": "advent2024",
   "version": "1.0.0",
   "description": "Advent of code",
   "main": "index.js",
-  "repository": "https://github.com/csaunders-ldt/advent2023.git",
+  "repository": "https://github.com/csaunders-ldt/advent2024.git",
   "author": "csaunders-ldt <chris@letsdothis.com>",
   "license": "UNLICENSED",
   "scripts": {

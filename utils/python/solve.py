@@ -3,7 +3,6 @@ import inspect
 import os
 from pathlib import Path
 import re
-import sys
 from urllib import request
 
 
@@ -34,7 +33,7 @@ def get_session():
 
 
 def check_solution(answer, day, part):
-    url = f"https://adventofcode.com/2023/day/{day}/answer"
+    url = f"https://adventofcode.com/2024/day/{day}/answer"
     query = f"level={part}&answer={answer}"
     print(query)
     print(get_session())

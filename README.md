@@ -1,4 +1,4 @@
-# Advent of Code 2023
+# Advent of Code 2024
 
 This repository has some boilerplate, utils and setup for running Advent of Code easily.
 

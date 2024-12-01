@@ -5,7 +5,7 @@ import { env } from 'process';
 import { aocFetch } from '../utils/typescript/fetch';
 config();
 
-const YEAR = 2023;
+const YEAR = 2024;
 
 const solverByLanguage = {
   typescript: 'solve.ts',
