@@ -9,15 +9,12 @@ function parser(input: string): Input {
 }
 
 function part1(input: Input) {
-  const sortedLists = input.map((arr) => sortBy(arr));
-  const pairs = zip(...sortedLists);
+  const pairs = zip(...input.map((arr) => sortBy(arr)));
   return sum(pairs.map(([a, b]) => Math.abs(+a - +b)));
 }
 
-function part2(input: Input) {
-  const [left, right] = input;
+function part2([left, right]: Input) {
   const counts = countBy(right);
-  console.log(left.map((n) => counts[n] ** 2 || 0));
   return sum(left.map((n) => counts[n] * +n || 0));
 }
 
