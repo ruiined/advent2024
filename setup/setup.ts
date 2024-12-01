@@ -1,17 +1,11 @@
 import { mkdirSync, writeFileSync, copyFile, existsSync } from 'fs';
 import { config } from 'dotenv';
 import { forEach, map } from 'lodash';
-import { env } from 'process';
-import { aocFetch } from '../utils/typescript/fetch';
+import { aocFetch } from '../utils/fetch';
 config();
 
 const YEAR = 2024;
-
-const solverByLanguage = {
-  typescript: 'solve.ts',
-  python: 'solve.py',
-  ruby: 'solve.rb',
-};
+const solverFile = 'solve.ts';
 
 if (!process.env.SESSION) {
   throw new Error(
@@ -32,9 +26,8 @@ async function setupDir(day: number) {
     copyFile(`_template/test1.txt`, `${folder}/test1.txt`, () => {});
     copyFile(`_template/test2.txt`, `${folder}/test2.txt`, () => {});
   }
-  const solver = solverByLanguage[env.LANGUAGE || 'typescript'];
-  if (!existsSync(`${folder}/${solver}`)) {
-    copyFile(`_template/${solver}`, `${folder}/${solver}`, () => {});
+  if (!existsSync(`${folder}/${solverFile}`)) {
+    copyFile(`_template/${solverFile}`, `${folder}/${solverFile}`, () => {});
   }
 }
 

@@ -8,10 +8,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "setup": "ts-node ./setup/setup.ts",
-    "typescript": "ts-node ./setup/advent.ts",
-    "python": "python3 ./advent.py",
-    "ruby": "ruby ./setup./advent.rb",
-    "start": "yarn typescript"
+    "start": "ts-node ./setup/advent.ts"
   },
   "dependencies": {
     "dotenv": "^16.0.3",

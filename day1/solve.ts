@@ -1,21 +1,17 @@
-import { countBy, sortBy, sum, zip } from 'lodash';
-import { solve } from '../utils/typescript';
+import { solve } from '../utils';
 
 type Input = string[][];
 
 function parser(input: string): Input {
-  const parts = input.split('\n').map((l) => l.split(/\s+/));
-  return zip(...parts);
+  return input.split('\n').map((l) => l.split(''));
 }
 
 function part1(input: Input) {
-  const pairs = zip(...input.map((arr) => sortBy(arr)));
-  return sum(pairs.map(([a, b]) => Math.abs(+a - +b)));
+  return input;
 }
 
-function part2([left, right]: Input) {
-  const counts = countBy(right);
-  return sum(left.map((n) => counts[n] * +n || 0));
+function part2(input: Input) {
+  return input;
 }
 
-solve({ part1, test1: 11, part2, test2: 31, parser });
+solve({ part1, test1: [], part2, test2: [], parser });

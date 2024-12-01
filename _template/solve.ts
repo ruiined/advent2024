@@ -1,4 +1,4 @@
-import { solve } from '../utils/typescript';
+import { solve } from '../utils';
 
 type Input = string[][];
 
